@@ -10,13 +10,15 @@ def get_price(input):
 
 ticker = get_ticker('KRW')
 
-usdt_btc = get_price('USDT-BTC')
-# coins_price = get_price(ticker)
-# print(coins_price)
+# usdt_btc = get_price('USDT-BTC')
+coins_price = get_price(ticker)
+coin_list = {}
+for k, v in coins_price.items():
+    coin_list[k[4:]] = [v,0 ,0,0,0]
+    
+print(coin_list)
+    
+    
+# btc_krw = get_price('KRW-BTC')
 
-btc_krw = get_price('KRW-BTC')
-print(btc_krw)
-print(usdt_btc)
-usdt = btc_krw / usdt_btc
-print(usdt)
 
